@@ -1,0 +1,10 @@
+D:\git\Source\net\OwinWebServer\bin\Debug\OwinWebServer.exe.config
+D:\git\Source\net\OwinWebServer\bin\Debug\OwinWebServer.exe
+D:\git\Source\net\OwinWebServer\bin\Debug\OwinWebServer.pdb
+D:\git\Source\net\OwinWebServer\bin\Debug\Microsoft.Owin.dll
+D:\git\Source\net\OwinWebServer\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+D:\git\Source\net\OwinWebServer\bin\Debug\Microsoft.Owin.Hosting.dll
+D:\git\Source\net\OwinWebServer\bin\Debug\Newtonsoft.Json.dll
+D:\git\Source\net\OwinWebServer\bin\Debug\Owin.dll
+D:\git\Source\net\OwinWebServer\obj\Debug\OwinWebServer.exe
+D:\git\Source\net\OwinWebServer\obj\Debug\OwinWebServer.pdb

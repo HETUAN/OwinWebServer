@@ -80,24 +80,51 @@ namespace OwinWebServer
             }
             else if (len == 1)
             {
-                path = args[0];
+                if (string.IsNullOrWhiteSpace(args[0]))
+                {
+                    path = Environment.CurrentDirectory;
+                }
+                else
+                {
+                    path = args[0];
+                }
                 local = "http://localhost:8181";
             }
             else
             {
-                path = args[0];
-                local = args[1];
+                if (string.IsNullOrWhiteSpace(args[0]))
+                {
+                    path = Environment.CurrentDirectory;
+                }
+                else
+                {
+                    path = args[0];
+                }
+                if (string.IsNullOrWhiteSpace(args[1]))
+                {
+                    local = "http://localhost:8181";
+                }
+                else
+                {
+                    local = args[1];
+                }
             }
-
             try
             {
                 var startOpts = new StartOptions(local) { };
+                //startOpts.Add(local);
+                //startOpts.Urls.Add(local.Replace("localhost","127.0.0.1"));
                 using (WebApp.Start<Startup>(startOpts))
                 {
                     Console.WriteLine("Server run at " + local + " , press Enter to exit.");
                     System.Diagnostics.Process.Start("explorer.exe", local);
                     Console.ReadKey();
                 }
+                string input = string.Empty;
+                do
+                {
+                    input = Console.ReadLine();
+                } while (input != "exit");
             }
             catch (Exception ex)
             {
