@@ -109,22 +109,26 @@ namespace OwinWebServer
                     local = args[1];
                 }
             }
+            Console.WriteLine(local);
+            Console.WriteLine(path);
             try
             {
-                var startOpts = new StartOptions(local) { };
-                //startOpts.Add(local);
+                //var startOpts = new StartOptions(local) { };
+                var startOpts = new StartOptions();
+                startOpts.Urls.Add(local);
                 //startOpts.Urls.Add(local.Replace("localhost","127.0.0.1"));
                 using (WebApp.Start<Startup>(startOpts))
                 {
                     Console.WriteLine("Server run at " + local + " , press Enter to exit.");
                     System.Diagnostics.Process.Start("explorer.exe", local);
+                    string input = string.Empty;
+                    do
+                    {
+                        input = Console.ReadLine();
+                    } while (input != "exit");
+                    Console.WriteLine("Server has stopped, press Enter to exit.");
                     Console.ReadKey();
                 }
-                string input = string.Empty;
-                do
-                {
-                    input = Console.ReadLine();
-                } while (input != "exit");
             }
             catch (Exception ex)
             {

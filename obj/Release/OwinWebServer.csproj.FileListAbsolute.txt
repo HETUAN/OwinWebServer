@@ -2,8 +2,11 @@ E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\OwinWebServer.exe.config
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\OwinWebServer.exe
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\OwinWebServer.pdb
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.dll
+E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.FileSystems.dll
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.Host.HttpListener.dll
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.Hosting.dll
+E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.StaticFiles.dll
+E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Newtonsoft.Json.dll
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Owin.dll
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.xml
 E:\HEPW\MySpace\NET\HSolution\OwinWebServer\bin\Release\Microsoft.Owin.Host.HttpListener.xml

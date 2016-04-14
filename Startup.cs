@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
+using Microsoft.Owin.FileSystems;
+using Microsoft.Owin.StaticFiles;
 
 namespace OwinWebServer
 {
@@ -56,5 +58,41 @@ namespace OwinWebServer
                 return context.Response.WriteAsync(ex.Message);
             }
         }
+    }
+
+    public class Startup1
+    {
+        private static string localDir;
+
+        static Startup1()
+        {
+            localDir = Program.GetPath();
+        }
+        public void Configuration(IAppBuilder appBuilder)
+        {
+            try
+            {
+                Console.WriteLine(localDir);
+                var fileSystem = new PhysicalFileSystem(localDir);
+                var options = new FileServerOptions
+                {
+                    EnableDirectoryBrowsing = true,
+                    FileSystem = fileSystem
+                };
+                appBuilder.UseFileServer(options: options);
+
+                appBuilder.Use(async (context, next) =>
+                {
+                    Console.WriteLine("log");
+                });
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
     }
 }

@@ -38,6 +38,12 @@ namespace OwinWebServer
                 case "Microsoft.Owin.Hosting":
                     dlldir = "OwinWebServer.DLL.Microsoft.Owin.Hosting.dll";
                     break;
+                case "Microsoft.Owin.FileSystems":
+                    dlldir = "OwinWebServer.DLL.Microsoft.Owin.FileSystems.dll";
+                    break;
+                case "Microsoft.Owin.StaticFiles":
+                    dlldir = "OwinWebServer.DLL.Microsoft.Owin.StaticFiles.dll";
+                    break;
                 default:
                     return null;
             }
@@ -58,7 +64,7 @@ namespace OwinWebServer
                     return Assembly.Load(bytes);
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 return null;
             }
